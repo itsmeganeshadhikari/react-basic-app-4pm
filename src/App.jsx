@@ -1,4 +1,12 @@
 import './App.css'
+import PropsDemo from './components/basic/PropsDemo'
+
+
+const data = {
+  id: 1,
+  name: "Ram",
+  phoneNumber: "9892349--"
+}
 
 function App() {
 
@@ -9,9 +17,7 @@ function App() {
      * React jsx element
      */
     <>
-      <h1>Hello to basic react</h1>
-      <div style={{ height: '300px', border: '1px solid green' }}>
-      </div>
+      <PropsDemo data={data} />
     </>
   )
 }
