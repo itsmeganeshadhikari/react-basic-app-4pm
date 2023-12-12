@@ -6,9 +6,16 @@
 
 
 const PropsDemo = (props) => {
-    const { id, name, phoneNumber } = props.data
+    console.log(props);
     return (
-        <div>Display {`${id} and ${name} ${phoneNumber}`}</div>
+        <div>
+            {props.data.map((e) => {
+                return (<div key={e.id}>
+                    <h1>{`id=${e.id} and name=${e.name}`}</h1>
+                    <img src={e.img} alt={e.name} />
+                </div>)
+            })}
+        </div>
     )
 }
 
